@@ -1,2 +1,157 @@
-# denzen-vintage
-for clothing
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denzen Vintage</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Denzen home">
+        <span class="brand-mark">DZ</span>
+        <span>Denzen</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#new">New In</a>
+        <a href="#shop">Shop</a>
+        <a href="#journal">Journal</a>
+      </nav>
+
+      <button class="cart-button" type="button" aria-label="Open cart">
+        <span>Bag</span>
+        <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated vintage clothing</p>
+          <h1 id="heroTitle">Denzen</h1>
+          <p>
+            Workwear jackets, washed denim, silk scarves, and rare pieces with
+            history in every stitch.
+          </p>
+          <a class="hero-link" href="#shop">Shop the drop</a>
+        </div>
+      </section>
+
+      <section class="intro" id="new">
+        <div>
+          <p class="eyebrow">This week's edit</p>
+          <h2>Found pieces, restored with care.</h2>
+        </div>
+        <p>
+          Every garment is hand-selected, measured, cleaned, and styled so you
+          can shop vintage without the guesswork.
+        </p>
+      </section>
+
+      <section class="feature-grid" aria-label="Featured collections">
+        <article class="feature feature-large">
+          <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80" alt="Vintage denim jacket hanging in a clothing shop">
+          <div>
+            <p class="eyebrow">Outerwear</p>
+            <h3>Faded denim jackets</h3>
+          </div>
+        </article>
+        <article class="feature">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=900&q=80" alt="Rack of vintage clothing in warm light">
+          <div>
+            <p class="eyebrow">Archive</p>
+            <h3>One-of-one finds</h3>
+          </div>
+        </article>
+        <article class="feature">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Person wearing a retro streetwear outfit">
+          <div>
+            <p class="eyebrow">Styling</p>
+            <h3>Modern vintage layers</h3>
+          </div>
+        </article>
+      </section>
+
+      <section class="shop" id="shop" aria-labelledby="shopTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Shop</p>
+            <h2 id="shopTitle">Fresh Finds</h2>
+          </div>
+          <div class="filters" aria-label="Product filters">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="jackets">Jackets</button>
+            <button class="filter" type="button" data-filter="denim">Denim</button>
+            <button class="filter" type="button" data-filter="accessories">Accessories</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="story" id="journal">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=80" alt="Vintage fashion editorial portrait">
+        <div>
+          <p class="eyebrow">Journal</p>
+          <h2>How we source</h2>
+          <p>
+            We look for natural wear, durable fabric, strong silhouettes, and
+            details that feel hard to fake: sun-softened cotton, sturdy hardware,
+            original labels, and beautiful repairs.
+          </p>
+          <a class="text-link" href="#shop">Browse the collection</a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-live="polite" aria-label="Shopping bag">
+      <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button class="close-cart" type="button" aria-label="Close cart">x</button>
+      </div>
+      <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Your bag is empty.</p>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rs. 0</strong>
+      </div>
+      <form class="payment-form" id="paymentForm">
+        <fieldset>
+          <legend>Payment Method</legend>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="esewa" checked>
+            <span>eSewa</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="khalti">
+            <span>Khalti</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="bank">
+            <span>Nepali Bank Transfer</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card">
+            <span>Credit Card</span>
+          </label>
+        </fieldset>
+
+        <div class="payment-details" id="paymentDetails"></div>
+        <button class="checkout" type="submit">Pay Now</button>
+        <p class="payment-note" id="paymentNote"></p>
+      </form>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <footer>
+      <p>Denzen Vintage</p>
+      <p>Small-batch drops every Friday.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
